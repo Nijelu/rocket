@@ -55,10 +55,10 @@ class RocketsController < ApplicationController
 
 
 # III
-  # # LAUNCH
-  # def launch
-  #   redirect_to '/', notice: 'Rocket launched !!!!!'
-  # end
+  # LAUNCH
+  def launch
+    redirect_to '/', notice: 'Rocket launched !!!!!'
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
