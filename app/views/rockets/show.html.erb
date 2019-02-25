@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rocket.name %>
+</p>
+
+<p>
+  <strong>Parts:</strong>
+  <%= @rocket.parts %>
+</p>
+
+<%= link_to 'Edit', edit_rocket_path(@rocket) %> |
+<%= link_to 'Back', rockets_path %>
+<% parts = @rocket.parts.split('-') %>
+<% t_color = 'black' if parts[0] == '1' %>
+<% t_color = 'red' if parts[0] == '2' %>
+<% t_color = 'blue' if parts[0] == '3' %>
+<% s1_color = 'black' if parts[1] == '1' %>
+<% s1_color = 'red' if parts[1] == '2' %>
+<% s1_color = 'blue' if parts[1] == '3' %>
+<% s2_color = 'black' if parts[2] == '1' %>
+<% s2_color = 'red' if parts[2] == '2' %>
+<% s2_color = 'blue' if parts[2] == '3' %>
+
+<div class="triangle-<%=t_color%>"></div>
+<div class="square-<%=s1_color%>"></div>
+<div class="square-<%=s2_color%>"></div>
+
+<style>
+  .triangle-black {
+      width: 0;
+      height: 0;
+      border: solid 30px;
+      border-color: transparent transparent black transparent;
+  }
+
+  .triangle-blue {
+      width: 0;
+      height: 0;
+      border: solid 30px;
+      border-color: transparent transparent blue transparent;
+  }
+
+  .triangle-red {
+      width: 0;
+      height: 0;
+      border: solid 30px;
+      border-color: transparent transparent red transparent;
+  }
+
+  .square-black {
+    width: 0;
+    height: 0;
+    border: solid 30px;
+    border-color: black black black black;
+  }
+
+  .square-blue {
+    width: 0;
+    height: 0;
+    border: solid 30px;
+    border-color: blue blue blue blue;
+  }
+
+  .square-red {
+    width: 0;
+    height: 0;
+    border: solid 30px;
+    border-color: red red red red;
+  }
+</style>
