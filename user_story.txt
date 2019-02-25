@@ -1,0 +1,3 @@
+I - As a User, I can choose parts of the Rocket
+II - As a User, I can see the rocket before launch
+III - As a User, I can launch the rocket

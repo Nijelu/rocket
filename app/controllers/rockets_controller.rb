@@ -14,26 +14,26 @@ class RocketsController < ApplicationController
   # end
 
 # I
-  # # GET /rockets/new
-  # def new
-  #   @rocket = Rocket.new
-  # end
+  # GET /rockets/new
+  def new
+    @rocket = Rocket.new
+  end
 
-  # # POST /rockets
-  # # POST /rockets.json
-  # def create
-  #   @rocket = Rocket.new(rocket_params)
+  # POST /rockets
+  # POST /rockets.json
+  def create
+    @rocket = Rocket.new(rocket_params)
 
-  #   respond_to do |format|
-  #     if @rocket.save
-  #       format.html { redirect_to @rocket, notice: 'Rocket was successfully created.' }
-  #       format.json { render :show, status: :created, location: @rocket }
-  #     else
-  #       format.html { render :new }
-  #       format.json { render json: @rocket.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+    respond_to do |format|
+      if @rocket.save
+        format.html { redirect_to @rocket, notice: 'Rocket was successfully created.' }
+        format.json { render :show, status: :created, location: @rocket }
+      else
+        format.html { render :new }
+        format.json { render json: @rocket.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # GET /rockets/1/edit
   def edit
