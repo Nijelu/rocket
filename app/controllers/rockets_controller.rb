@@ -8,10 +8,10 @@ class RocketsController < ApplicationController
   end
 
 # II
-  # # GET /rockets/1
-  # # GET /rockets/1.json
-  # def show
-  # end
+  # GET /rockets/1
+  # GET /rockets/1.json
+  def show
+  end
 
 # I
   # GET /rockets/new
